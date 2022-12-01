@@ -86,8 +86,7 @@
 	</build>
 
 	<scm>
-		<url>https://github.com/keremcengiz0/sfg-pet-clinic.git</url>
+		<url>git@github.com:keremcengiz0/sfg-pet-clinic.git</url>
 		<connection>scm:git:https://github.com/keremcengiz0/sfg-pet-clinic.git</connection>
 	</scm>
-
 </project>
