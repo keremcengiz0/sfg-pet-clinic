@@ -9,14 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/owners")
 @Controller
 public class OwnerController {
-
     private OwnerService ownerService;
-
     @Autowired
     public OwnerController(OwnerService ownerService) {
         this.ownerService = ownerService;
     }
-
 
     @RequestMapping({"", "/", "/index", "/index.html"})
     public String listOwners(Model model) {
