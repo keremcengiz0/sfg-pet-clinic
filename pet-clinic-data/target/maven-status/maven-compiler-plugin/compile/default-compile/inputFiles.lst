@@ -1,8 +1,14 @@
-C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\business\OwnerService.java
-C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\entities\Pet.java
+C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\business\abstracts\OwnerServiceMap.java
 C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\entities\Vet.java
+C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\business\abstracts\AbstractMapService.java
 C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\entities\Owner.java
 C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\entities\PetType.java
 C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\business\PetService.java
+C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\entities\BaseEntity.java
 C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\entities\Person.java
+C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\business\abstracts\VetServiceMap.java
+C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\business\OwnerService.java
+C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\entities\Pet.java
+C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\business\CrudService.java
+C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\business\abstracts\PetServiceMap.java
 C:\Users\Hulya\intelij-SpringBoot\sfg-pet-clinic\pet-clinic-data\src\main\java\guru\springframework\sfgpetclinic\business\VetService.java
