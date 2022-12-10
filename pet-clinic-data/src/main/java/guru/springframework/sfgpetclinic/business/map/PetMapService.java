@@ -2,11 +2,13 @@ package guru.springframework.sfgpetclinic.business.map;
 
 import guru.springframework.sfgpetclinic.business.abstracts.PetService;
 import guru.springframework.sfgpetclinic.entities.Pet;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default", "map"})
 public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
