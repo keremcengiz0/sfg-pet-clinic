@@ -1,5 +1,9 @@
 package guru.springframework.sfgpetclinic.business;
 
+import guru.springframework.sfgpetclinic.business.abstracts.OwnerService;
+import guru.springframework.sfgpetclinic.business.abstracts.PetTypeService;
+import guru.springframework.sfgpetclinic.business.abstracts.SpecialtyService;
+import guru.springframework.sfgpetclinic.business.abstracts.VetService;
 import guru.springframework.sfgpetclinic.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -68,7 +72,7 @@ public class DataLoader implements CommandLineRunner {
         owner1.setTelephone("1231231234");
 
         Pet mikesPet = new Pet();
-        mikesPet.setType(savedDogType);
+        mikesPet.setPetType(savedDogType);
         mikesPet.setName("Rosco");
         mikesPet.setOwner(owner1);
         mikesPet.setBirthDate(LocalDate.now());
@@ -83,7 +87,7 @@ public class DataLoader implements CommandLineRunner {
         owner2.setTelephone("2341232341");
 
         Pet fionasCat = new Pet();
-        fionasCat.setType(savedCatType);
+        fionasCat.setPetType(savedCatType);
         fionasCat.setName("Fadime");
         fionasCat.setOwner(owner2);
         fionasCat.setBirthDate(LocalDate.now());

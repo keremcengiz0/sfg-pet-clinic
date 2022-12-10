@@ -1,4 +1,4 @@
-package guru.springframework.sfgpetclinic.business;
+package guru.springframework.sfgpetclinic.business.abstracts;
 
 import java.util.Set;
 
