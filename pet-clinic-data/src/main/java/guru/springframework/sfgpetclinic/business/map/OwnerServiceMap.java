@@ -1,4 +1,4 @@
-package guru.springframework.sfgpetclinic.business.abstracts;
+package guru.springframework.sfgpetclinic.business.map;
 
 import guru.springframework.sfgpetclinic.business.OwnerService;
 import guru.springframework.sfgpetclinic.business.PetService;
@@ -41,9 +41,9 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
         if (object != null) {
             if (object.getPets() != null) {
                 object.getPets().forEach(pet -> {
-                    if (pet.getType() != null) {
-                        if (pet.getType().getId() == null) {
-                            pet.setType(petTypeService.save(pet.getType()));
+                    if (pet.getPetType() != null) {
+                        if (pet.getPetType().getId() == null) {
+                            pet.setPetType(petTypeService.save(pet.getPetType()));
                         }
 
                     } else {
