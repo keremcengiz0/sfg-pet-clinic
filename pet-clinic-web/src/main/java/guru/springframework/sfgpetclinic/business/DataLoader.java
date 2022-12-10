@@ -1,9 +1,6 @@
 package guru.springframework.sfgpetclinic.business;
 
-import guru.springframework.sfgpetclinic.business.abstracts.OwnerService;
-import guru.springframework.sfgpetclinic.business.abstracts.PetTypeService;
-import guru.springframework.sfgpetclinic.business.abstracts.SpecialtyService;
-import guru.springframework.sfgpetclinic.business.abstracts.VetService;
+import guru.springframework.sfgpetclinic.business.abstracts.*;
 import guru.springframework.sfgpetclinic.entities.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,16 +15,18 @@ public class DataLoader implements CommandLineRunner {
     private VetService vetService;
     private PetTypeService petTypeService;
     private SpecialtyService specialtyService;
+    private VisitService visitService;
 
     public DataLoader() {
     }
 
     @Autowired
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -37,10 +36,6 @@ public class DataLoader implements CommandLineRunner {
         if(count == 0) {
             loadData();
         }
-
-
-
-
     }
 
     private void loadData() {
@@ -93,6 +88,12 @@ public class DataLoader implements CommandLineRunner {
         fionasCat.setBirthDate(LocalDate.now());
         owner2.getPets().add(fionasCat);
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(fionasCat);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+        visitService.save(catVisit);
 
         System.out.println("Loaded Owners...");
 
