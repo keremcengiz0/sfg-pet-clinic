@@ -29,12 +29,12 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependecies-
 
+      - run: mvn dependency:go-offline
+
       - save_cache:
           paths:
             - ~/.m2
           key: sfg-pet-clinic-{{ checksum "pom.xml" }}
-
-      - run: mvn dependency:go-offline
 
       # Then run your tests!
       - run: mvn install
@@ -44,6 +44,3 @@ workflows:
   # Inside the workflow, you provide the jobs you want to run, e.g this workflow runs the build-and-test job above.
   # CircleCI will run this workflow on every commit.
   # For more details on extending your workflow, see the configuration docs: https://circleci.com/docs/2.0/configuration-reference/#workflows
-  sample:
-    jobs:
-      - build-and-test
