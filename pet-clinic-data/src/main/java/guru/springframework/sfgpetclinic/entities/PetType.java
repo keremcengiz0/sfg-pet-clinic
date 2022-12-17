@@ -9,7 +9,6 @@ import javax.persistence.Table;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
 @Table(name = "types")
 public class PetType extends BaseEntity {
@@ -18,7 +17,6 @@ public class PetType extends BaseEntity {
         super(id);
         this.name = name;
     }
-
 
     @Column(name = "name")
     private String name;

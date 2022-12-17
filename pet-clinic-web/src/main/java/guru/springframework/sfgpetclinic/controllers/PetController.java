@@ -6,8 +6,6 @@ import guru.springframework.sfgpetclinic.business.abstracts.PetTypeService;
 import guru.springframework.sfgpetclinic.entities.Owner;
 import guru.springframework.sfgpetclinic.entities.Pet;
 import guru.springframework.sfgpetclinic.entities.PetType;
-import guru.springframework.sfgpetclinic.repositories.OwnerRepository;
-import guru.springframework.sfgpetclinic.repositories.PetRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -22,7 +20,6 @@ import java.util.Collection;
 @RequestMapping("/owners/{ownerId}")
 public class PetController {
 
-
     private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
 
     private final PetService petService;
@@ -34,7 +31,6 @@ public class PetController {
         this.ownerService = ownerService;
         this.petTypeService = petTypeService;
     }
-
 
     @ModelAttribute("types")
     public Collection<PetType> populatePetTypes() {
@@ -77,7 +73,6 @@ public class PetController {
             return "redirect:/owners/" + owner.getId();
         }
     }
-
 
     @GetMapping("/pets/{petId}/edit")
     public String initUpdateForm(@PathVariable Long petId, Model model) {
