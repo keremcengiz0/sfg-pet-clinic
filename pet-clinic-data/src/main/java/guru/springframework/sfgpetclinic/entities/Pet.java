@@ -1,6 +1,8 @@
 package guru.springframework.sfgpetclinic.entities;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -33,6 +35,7 @@ public class Pet extends BaseEntity {
     private String name;
 
     @Column(name = "birthDate")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 
     @ManyToOne
